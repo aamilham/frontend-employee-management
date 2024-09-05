@@ -1,6 +1,6 @@
 # Employee Management System - Frontend
 
-Employee Management System frontend built using React.js, interacts with the backend API for employee data management. It supports CRUD (Create, Read, Update, Delete) operations for employees, with additional auth features like login, registration, and employee management.
+Employee Management System frontend built using React.js, interacts with the backend API for employee data management. It supports CRUD (Create, Read, Update, Delete) operations for employees, with additional auth features like login, registration, and employee management. [Backend Repository](https://github.com/aamilham/backend-employee-management)
 
 ## Authors
 
