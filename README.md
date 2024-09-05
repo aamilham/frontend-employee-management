@@ -1,70 +1,106 @@
-# Getting Started with Create React App
+# Employee Management System - Frontend
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Employee Management System frontend built using React.js, interacts with the backend API for employee data management. It supports CRUD (Create, Read, Update, Delete) operations for employees, with additional auth features like login, registration, and employee management.
+
+## Authors
+
+- [@aamilham](https://github.com/aamilham)
+
+## Features
+- **Login and Register**: Users can log in and register.
+- **Employee Management**: Users can view, create, update, and delete employee records.
+- **Filtering and Search**: Users can search employees by name, filter by position, and filter by salary range.
+
+## Prerequisites
+
+Make sure you have the following installed on your system:
+
+- [Node.js (>= 12.x.x)](https://nodejs.org/).
+- npm (comes with Node.js)
+
+## Step-by-Step Installation
+
+### 1. Clone the Repository
+
+Clone the repository to your local
+
+### 2. Install Dependencies
+
+Run the following command to install all the required dependencies:
+
+```bash
+npm install
+```
+
+### 3. Start Backend (Include Databases)
+
+This Frontend communicates with a [Backend API](https://github.com/aamilham/backend-employee-management), you need to start the API first. URL format that used in this frontend is :
+
+```bash
+REACT_APP_API_URL=http://localhost:8000/api
+```
+
+### 4. Start the Application
+
+Now you can start the React development server by running:
+
+```bash
+npm start
+```
+
+This will start the application, access it on `http://localhost:3000`.
+
+### 5. Add Ons - Building the Application for Production
+
+If you want to create an optimized build for production, you can run the following command:
+
+```bash
+npm run build
+```
+
+This will generate a `build` folder with the optimized version of the application.
+
+## Project Structure
+
+Here's a quick overview of the key files and folders in this project:
+
+```
+.
+├── public/                 # Public assets
+├── src/                    # Main source code folder
+│   ├── components/         # React components like Login, Register, EmployeeList, etc.
+│   ├── context/            # Context API files for managing global state
+│   ├── App.js              # Main app file with routing
+│   ├── index.js            # Entry point for the React application
+│   └── ...
+├── package.json            # Project metadata and dependencies
+└── README.md               # Instructions (this file)
+```
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+- **`npm start`**: Runs the app in development mode. Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **`npm run build`**: Builds the app for production to the `build` folder.
+- **`npm test`**: Launches the test runner in interactive watch mode.
+- **`npm run eject`**: If you need to customize the configuration.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Dependencies
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+This project uses the following main dependencies:
 
-### `npm test`
+- **React**: JavaScript library for building user interfaces.
+- **React Router**: Declarative routing for React apps.
+- **Axios**: Promise-based HTTP client for interacting with the backend API.
+- **Context API**: To manage global state, including authentication tokens.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Notes
 
-### `npm run build`
+- Ensure that the backend API is running and accessible at the `REACT_APP_API_URL` that you have configured.
+- The backend should implement JWT-based authentication for the protected routes, such as employee management.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Troubleshooting
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Blank Page**: If the application shows a blank page, check if the backend API URL is correctly set up and reachable.
+- **Login Issues**: Ensure that the backend JWT authentication is correctly configured and that valid credentials are used.
